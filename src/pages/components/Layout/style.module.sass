@@ -4,32 +4,6 @@
   justify-content: space-between
   padding: 2.5rem
 
-.hamburgerWrap
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  gap: .4375rem
-  transition: .4s all
-  width: 3.75rem
-  height: 3.75rem
-  cursor: pointer
-  > span
-    width: 3.8125rem
-    height: .125rem
-    background: #fff
-    transition: .4s all
-    position: relative
-    &::after
-      content: ""
-      position: absolute
-      transition: .4s all
-      left: 0
-      right: 0
-      border-top: 3px solid #fff
-      border-right: 5px solid #000
-    &:last-child
-      left: -0.625rem
 .nav
   display: flex
   align-items: center
@@ -60,33 +34,6 @@
     border-bottom: 4px solid #33B7BC
     border-left: 3px solid #000
 
-.isActive
-  gap: 0
-  span
-    border-radius: 12px
-    &:first-child
-      transform: translate(0, 2px) rotate(45deg)
-    &:last-child
-      transform: translate(10px, 0px) rotate(-45deg)
-    &::after
-      border: none
-
-.dropdown
-  background: none
-  border: none
-  appearance: none
-  background: url(/img/arrow.svg) no-repeat right
-  outline: none
-  width: 400px
-  &:focus
-    background: url(/img/arrow-b.svg) no-repeat right
-  > option
-    // text-align: center
-    margin-left: 1.25rem
-    background: #000
-    padding: 1.25rem
-    width: 320px
-
 .dropDownWrap
   transition: .6s all
   position: relative
@@ -95,24 +42,31 @@
     background: none
     display: flex
     align-items: center
+    text-transform: uppercase
+    font-weight: 700
+    text-align: left
     gap: .625rem
+    width: max-content
     cursor: pointer
 
 .menu
   transition: .5s all
-  overflow-x: hidden
+  overflow: hidden
   position: absolute
   height: 0
-  left: 0
-  right: 0
+  padding: 1.5625rem
+  padding-bottom: 0
+  padding-top: 0
+  left: -0.625rem
+  top: 2.5rem
   width: max-content
   display: flex
   flex-direction: column
   gap: .9375rem
-  padding: 1.5625rem
-  padding-top: 0
-  border: 2px solid #323232
-  padding-bottom: 0
+  border: 2px solid #000000
+  border-radius: .75rem
+  > span
+    cursor: pointer
   > hr
     border: none
     height: .125rem !important
@@ -121,9 +75,12 @@
 
 .activeDropDown
   height: 31.25rem
+  border: 2px solid #323232
   padding: 1.5625rem
+  z-index: 99
 
 .arrow
   transition: .5s all
+
 .arActive
   transform: rotate(180deg)
