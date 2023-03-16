@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import "@/styles/globals.sass";
+import "../styles/globals.sass";
 import Layout from "./components/Layout";
 
 const fontsss = localFont({

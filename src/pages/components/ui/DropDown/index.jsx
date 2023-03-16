@@ -1,28 +1,39 @@
 import Image from "next/image";
-import React from "react";
+import styles from "./style.module.sass";
+import cn from "clsx";
+import { useState } from "react";
+const DropDown = ({ children, menu, title }) => {
+  const [toggle, setToggle] = useState(false);
+  const [mess, setMess] = useState(title);
 
-const DropDown = () => {
+  const dropDown = () => {
+    setToggle((toggle) => !toggle);
+  };
+
+  const changeDrop = (e) => {
+    setToggle(false);
+    setMess(e.target.textContent);
+  };
   return (
     <div className={styles.dropDownWrap}>
       <button onClick={dropDown}>
-        {messDrop}
+        {mess}
         <Image
           src="/img/arrow.svg"
           width="10"
           height="10"
-          className={cn(styles.arrow, drop && styles.arActive)}
+          className={cn(styles.arrow, toggle && styles.arActive)}
           alt=""
         />
       </button>
-      <div className={cn(styles.menu, drop && styles.activeDropDown)}>
-        <span onClick={changeDrop}>Dubai</span>
-        <hr />
-        <span onClick={changeDrop}>Moscow</span>
-        <hr />
-        <span onClick={changeDrop}>Budapest</span>
-        <hr />
-        <span onClick={changeDrop}>Wiesbaden</span>
-        <hr />
+      <div className={cn(styles.menu, toggle && styles.activeDropDown)}>
+        {menu.map((item) => {
+          return (
+            <span className={styles.content} key={item.id} onClick={changeDrop}>
+              {item.title}
+            </span>
+          );
+        })}
       </div>
     </div>
   );

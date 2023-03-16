@@ -1,38 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import cn from "clsx";
-
 import styles from "./style.module.sass";
 import { nav } from "./nav";
-import { useState } from "react";
 import Hamburger from "../ui/Hamburger";
+import DropDown from "../ui/DropDown";
+import { country, lang } from "../ui/DropDown/menu";
+import CustomLink from "../ui/CustomLink";
 
 const Layout = ({ children }) => {
-  const { asPath } = useRouter();
-  const [drop, setDrop] = useState(false);
-  const [lang, setLang] = useState(false);
-  const [messDrop, setMessDrop] = useState("Выбирите страну");
-  const [messLang, setMessLang] = useState("Выбирите язык");
   let img = "/img/logo.svg";
-
-  const dropDown = () => {
-    setDrop((drop) => !drop);
-  };
-
-  const langDrop = () => {
-    setLang((lang) => !lang);
-  };
-
-  const changeDrop = (e) => {
-    setDrop(false);
-    setMessDrop(e.target.textContent);
-  };
-
-  const changeLang = (e) => {
-    setLang(false);
-    setMessLang(e.target.textContent);
-  };
   return (
     <div>
       <header className={styles.header}>
@@ -40,37 +17,28 @@ const Layout = ({ children }) => {
           <Hamburger />
           {nav.map((data) => {
             return (
-              <Link
+              <CustomLink
+                activeClass={data.href}
                 href={data.href}
                 key={data.id}
-                className={asPath === data.href && styles.active}
               >
                 {data.title}
-              </Link>
+              </CustomLink>
             );
           })}
         </nav>
-        <Image src={img} alt="logo" width="147" height="139" />
+        <Image
+          className={styles.logo}
+          src={img}
+          alt="logo"
+          width="147"
+          height="139"
+        />
         <nav className={styles.nav}>
           <Link href="tel:+971 58 590 7875">+971 58 590 7875</Link>
 
-          <div className={styles.dropDownWrap}>
-            <button onClick={langDrop}>
-              {messLang}
-              <Image
-                src="/img/arrow.svg"
-                width="10"
-                height="10"
-                className={cn(styles.arrow, lang && styles.arActive)}
-                alt=""
-              />
-            </button>
-            <div className={cn(styles.menu, lang && styles.activeDropDown)}>
-              <span onClick={changeLang}>ENG</span>
-              <hr />
-              <span onClick={changeLang}>RUS</span>
-            </div>
-          </div>
+          <DropDown title="Country" menu={country} />
+          <DropDown title="Lang" menu={lang} />
         </nav>
       </header>
       <main>{children}</main>

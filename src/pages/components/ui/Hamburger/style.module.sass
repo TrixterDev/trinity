@@ -1,4 +1,5 @@
 .hamburgerWrap
+  z-index: 99
   display: flex
   flex-direction: column
   justify-content: center
@@ -24,6 +25,11 @@
       border-right: 5px solid #000
     &:last-child
       left: -0.625rem
+  &:hover
+    > span
+      background: #33B7BC
+      &::after
+        background: #33B7BC
 
 .isActive
   gap: 0
