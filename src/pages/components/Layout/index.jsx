@@ -37,8 +37,10 @@ const Layout = ({ children }) => {
         <nav className={styles.nav}>
           <Link href="tel:+971 58 590 7875">+971 58 590 7875</Link>
 
-          <DropDown title="Country" menu={country} />
-          <DropDown title="Lang" menu={lang} />
+          <di className={styles.dropDown}>
+            <DropDown title="Country" menu={country} />
+            <DropDown title="Lang" menu={lang} />
+          </di>
         </nav>
       </header>
       <main>{children}</main>

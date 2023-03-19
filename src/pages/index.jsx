@@ -1,13 +1,5 @@
-import Image from "next/image";
-import { useState } from "react";
+import HomePage from "./components/Home";
 
 export default function Home() {
-  const [img, setImg] = useState("/img/logo.svg");
-
-  return (
-    <>
-      {/* <Image src={img} width="140" height="150" /> */}
-      <h1>Home page</h1>
-    </>
-  );
+  return <HomePage />;
 }
