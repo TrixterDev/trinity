@@ -2,9 +2,11 @@ import Image from "next/image";
 import styles from "./style.module.sass";
 import cn from "clsx";
 import { useState } from "react";
-const DropDown = ({ children, menu, title }) => {
+const DropDown = ({ menu, title, text }) => {
   const [toggle, setToggle] = useState(false);
   const [mess, setMess] = useState(title);
+
+  text && text.push(mess);
 
   const dropDown = () => {
     setToggle((toggle) => !toggle);

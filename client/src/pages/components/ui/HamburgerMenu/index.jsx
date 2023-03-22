@@ -4,7 +4,7 @@ import styles from "./style.module.scss";
 import CustomLink from "../CustomLink";
 import Icons from "../Icons";
 
-const HamburgerMenu = () => {
+const HamburgerMenu = (toggle) => {
   return (
     <div className={styles.wrap}>
       <div className={styles.container}>
@@ -16,6 +16,7 @@ const HamburgerMenu = () => {
                 key={data.id}
                 activeClass={data.href}
                 dubleClass={styles.font}
+                click={toggle}
               >
                 {data.title}
               </CustomLink>

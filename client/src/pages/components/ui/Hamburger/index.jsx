@@ -3,22 +3,17 @@ import cn from "clsx";
 import styles from "./style.module.sass";
 import HamburgerMenu from "../HamburgerMenu";
 
-const Hamburger = () => {
-  const [hamburger, setHamburger] = useState(false);
-
-  const hamburgerTogggle = () => {
-    setHamburger((hamburger) => !hamburger);
-  };
+const Hamburger = ({ hamburger, click }) => {
   return (
     <>
       <div
-        onClick={hamburgerTogggle}
+        onClick={click}
         className={cn(styles.hamburgerWrap, hamburger && styles.isActive)}
       >
         <span></span>
         <span></span>
       </div>
-      {hamburger && <HamburgerMenu />}
+      {hamburger && <HamburgerMenu toggle={click} />}
     </>
   );
 };

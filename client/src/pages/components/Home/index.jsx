@@ -5,7 +5,8 @@ const HomePage = () => {
   return (
     <div>
       <div>
-        <Image src="/img/home/banner.png" fill />
+        {/* <Image src="/img/home/banner.png" fill /> */}
+        <h1></h1>
       </div>
     </div>
   );
