@@ -1,37 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "./style.module.sass";
+import styles from "./style.module.scss";
 import { nav } from "./nav";
 import Hamburger from "../ui/Hamburger";
 import DropDown from "../ui/DropDown";
 import { country, lang } from "../ui/DropDown/menu";
 import CustomLink from "../ui/CustomLink";
 import { useState } from "react";
+import { useContexts } from "@/context";
 
 const Layout = ({ children }) => {
   const [text, setText] = useState([]);
-  const [hamburger, setHamburger] = useState(false);
+
+  const { hamburger, hamburgerTogggle } = useContexts();
 
   let img = "/img/logo.svg";
-
-  const hamburgerTogggle = () => {
-    setHamburger((hamburger) => !hamburger);
-  };
-
-  const linkClick = () => {
-    setHamburger(false);
-  };
 
   return (
     <div>
       <header className={styles.header}>
         <nav className={styles.nav}>
-          <Hamburger
-            click={hamburgerTogggle}
-            hamburger={hamburger}
-            // linkClick={hamburgerTogggle}
-          />
+          <Hamburger hamburger={hamburger} click={hamburgerTogggle} />
           {nav.map((data) => {
             return (
               <CustomLink

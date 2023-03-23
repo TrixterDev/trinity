@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import cn from "clsx";
-import styles from "./style.module.sass";
+import styles from "./style.module.scss";
 import HamburgerMenu from "../HamburgerMenu";
 
 const Hamburger = ({ hamburger, click }) => {
@@ -13,7 +13,7 @@ const Hamburger = ({ hamburger, click }) => {
         <span></span>
         <span></span>
       </div>
-      {hamburger && <HamburgerMenu toggle={click} />}
+      {hamburger && <HamburgerMenu />}
     </>
   );
 };

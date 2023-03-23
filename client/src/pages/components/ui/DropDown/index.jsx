@@ -1,12 +1,12 @@
 import Image from "next/image";
-import styles from "./style.module.sass";
+import styles from "./style.module.scss";
 import cn from "clsx";
 import { useState } from "react";
-const DropDown = ({ menu, title, text }) => {
+import { useContexts } from "@/context";
+const DropDown = ({ menu, title }) => {
   const [toggle, setToggle] = useState(false);
   const [mess, setMess] = useState(title);
-
-  text && text.push(mess);
+  const { country, setCountry } = useContexts();
 
   const dropDown = () => {
     setToggle((toggle) => !toggle);
@@ -15,6 +15,7 @@ const DropDown = ({ menu, title, text }) => {
   const changeDrop = (e) => {
     setToggle(false);
     setMess(e.target.textContent);
+    setCountry(mess);
   };
   return (
     <div className={styles.dropDownWrap}>

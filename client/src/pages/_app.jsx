@@ -1,3 +1,4 @@
+import { Providers } from "@/context";
 import localFont from "next/font/local";
 import "../styles/globals.sass";
 import Layout from "./components/Layout";
@@ -33,10 +34,12 @@ const fontsss = localFont({
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={fontsss.className}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </div>
+    <Providers>
+      <div className={fontsss.className}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </div>
+    </Providers>
   );
 }

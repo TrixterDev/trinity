@@ -3,8 +3,11 @@ import { nav } from "./nav";
 import styles from "./style.module.scss";
 import CustomLink from "../CustomLink";
 import Icons from "../Icons";
+import { useContexts } from "@/context";
 
-const HamburgerMenu = (toggle) => {
+const HamburgerMenu = () => {
+  const { hamburgerTogggle } = useContexts();
+
   return (
     <div className={styles.wrap}>
       <div className={styles.container}>
@@ -16,7 +19,7 @@ const HamburgerMenu = (toggle) => {
                 key={data.id}
                 activeClass={data.href}
                 dubleClass={styles.font}
-                click={toggle}
+                click={hamburgerTogggle}
               >
                 {data.title}
               </CustomLink>
