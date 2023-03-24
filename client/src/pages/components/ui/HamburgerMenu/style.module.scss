@@ -1,0 +1,117 @@
+.wrap {
+  background: url("/img/card-adaptive.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  animation: myAnim 0.5s ease-in-out 0s 1 normal forwards;
+  flex-direction: column;
+}
+@keyframes myAnim {
+  0% {
+    top: -1000px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.content {
+  width: 100%;
+  margin-left: auto;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    font-size: 34px;
+  }
+  p {
+    font-size: 24px;
+    color: #76828c;
+    font-weight: 350;
+  }
+  > hr {
+    border: none;
+    height: 2px;
+    width: 100%;
+    background: #272727;
+    margin-top: auto;
+  }
+  &_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px;
+    gap: 1.875rem;
+  }
+}
+
+.wrapIcons {
+  display: flex;
+  align-items: center;
+  gap: 1.5625rem;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  padding: 50px;
+  gap: 60px;
+  width: 40%;
+  top: 20%;
+  a {
+    display: inline-block;
+    width: max-content;
+  }
+}
+
+.font {
+  font-size: 54px;
+}
+
+@media screen and (max-height: 815px) {
+  .nav {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 71.875rem) {
+  .nav,
+  .wrapIcons,
+  .content_info {
+    a,
+    p {
+      font-size: 18px;
+    }
+  }
+  .nav {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    width: 100%;
+    gap: 1.25rem;
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 705px) {
+  .content_info {
+    flex-direction: column;
+    width: 100%;
+    padding: 25px;
+  }
+  .wrapIcons {
+    flex-direction: column;
+  }
+}

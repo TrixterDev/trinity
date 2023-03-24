@@ -1,0 +1,104 @@
+.wrap {
+  &_telega {
+    position: relative;
+    width: max-content;
+    &::after {
+      content: "";
+      background: transparent;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      top: -4px;
+      transition: 0.5s all;
+      left: -4px;
+      z-index: -1;
+      position: absolute;
+    }
+    &::before {
+      content: "";
+      background: transparent;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      top: -7px;
+      left: -7px;
+      transition: 0.5s all;
+      z-index: -1;
+      position: absolute;
+    }
+    &:hover {
+      &::after {
+        background: #34a9df88;
+      }
+      &::before {
+        background: #34a9df4d;
+      }
+    }
+  }
+  &_whats {
+    position: relative;
+    width: max-content;
+    &::after {
+      content: "";
+      background: transparent;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      top: -4px;
+      transition: 0.5s all;
+      left: -4px;
+      z-index: -1;
+      position: absolute;
+    }
+    &::before {
+      content: "";
+      background: transparent;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      top: -7px;
+      left: -7px;
+      transition: 0.5s all;
+      z-index: -1;
+      position: absolute;
+    }
+    &:hover {
+      &::after {
+        background: #43d8548c;
+      }
+      &::before {
+        background: #43d8543b;
+      }
+    }
+  }
+  &_icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5625rem;
+  }
+}
+
+.telegram {
+  font-size: 47px;
+  fill: #fff;
+  background: #34aadf;
+  padding: 13px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.whats {
+  font-size: 47px;
+  fill: #fff;
+  background: #43d854;
+  padding: 13px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.wrapIcons {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
