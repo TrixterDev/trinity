@@ -102,3 +102,13 @@
   align-items: center;
   gap: 1.25rem;
 }
+
+.icon {
+  > svg {
+    fill: #33b7bc;
+    transition: 0.5s all;
+    &:hover {
+      fill: #fff;
+    }
+  }
+}

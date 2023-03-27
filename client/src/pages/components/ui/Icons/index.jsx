@@ -1,7 +1,7 @@
 import { FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 import styles from "./style.module.scss";
 
-const Icons = () => {
+export const Icons = () => {
   return (
     <div className={styles.wrapIcons}>
       <div className={styles.wrap_telega}>
@@ -18,4 +18,10 @@ const Icons = () => {
   );
 };
 
-export default Icons;
+export const FooterIcons = ({ link, target, children }) => {
+  return (
+    <a href={link} className={styles.icon} target={target}>
+      {children}
+    </a>
+  );
+};
