@@ -1,18 +1,13 @@
 import React, { useState } from "react";
 import cn from "clsx";
-import styles from "./style.module.sass";
+import styles from "./style.module.scss";
 import HamburgerMenu from "../HamburgerMenu";
 
-const Hamburger = () => {
-  const [hamburger, setHamburger] = useState(false);
-
-  const hamburgerTogggle = () => {
-    setHamburger((hamburger) => !hamburger);
-  };
+const Hamburger = ({ hamburger, click }) => {
   return (
     <>
       <div
-        onClick={hamburgerTogggle}
+        onClick={click}
         className={cn(styles.hamburgerWrap, hamburger && styles.isActive)}
       >
         <span></span>

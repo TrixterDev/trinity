@@ -2,9 +2,12 @@ import Link from "next/link";
 import { nav } from "./nav";
 import styles from "./style.module.scss";
 import CustomLink from "../CustomLink";
-import Icons from "../Icons";
+import { Icons } from "../Icons";
+import { useContexts } from "@/context";
 
 const HamburgerMenu = () => {
+  const { hamburgerTogggle } = useContexts();
+
   return (
     <div className={styles.wrap}>
       <div className={styles.container}>
@@ -16,6 +19,7 @@ const HamburgerMenu = () => {
                 key={data.id}
                 activeClass={data.href}
                 dubleClass={styles.font}
+                click={hamburgerTogggle}
               >
                 {data.title}
               </CustomLink>
