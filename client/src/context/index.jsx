@@ -5,6 +5,12 @@ const Context = createContext({});
 export const Providers = ({ children }) => {
   const [hamburger, setHamburger] = useState(false);
   const [country, setCountry] = useState();
+  const [ask, setAsk] = useState({
+    name: "",
+    email: "",
+    tel: "",
+    mess: "",
+  });
 
   const hamburgerTogggle = () => {
     setHamburger((hamburger) => !hamburger);
@@ -12,7 +18,7 @@ export const Providers = ({ children }) => {
 
   return (
     <Context.Provider
-      value={{ hamburger, hamburgerTogggle, country, setCountry }}
+      value={{ hamburger, hamburgerTogggle, country, setCountry, ask, setAsk }}
     >
       {children}
     </Context.Provider>
