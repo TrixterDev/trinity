@@ -1,9 +1,7 @@
-import Link from "next/link";
 import Accordion from "./components/Accordion";
 import style from "./style.module.scss";
-import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
-import { CiMail } from "react-icons/ci";
 import EndSiteBlocks from "../components/EndSiteBlocks";
+import BreadCrumps from "../components/ui/BreadCrumps";
 function Condition() {
   const accordionData = [
     {
@@ -46,16 +44,7 @@ function Condition() {
   return (
     <div>
       <div className={style.wrapper}>
-        <div className={style.breadcrumb}>
-          <Link className={style.activeLink} href="#">
-            Main
-          </Link>
-          <span>
-            {" "}
-            <MdOutlineKeyboardDoubleArrowRight />{" "}
-          </span>
-          <Link href="#">Conditions</Link>
-        </div>
+        <BreadCrumps />
         <div className={style.contentBlock}>
           <h1 className={style.title}>Car rental conditions</h1>
           <p className={style.desc}>Requirements for Customers</p>
