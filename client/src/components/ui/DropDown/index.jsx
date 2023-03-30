@@ -2,11 +2,11 @@ import Image from "next/image";
 import styles from "./style.module.scss";
 import cn from "clsx";
 import { useState } from "react";
-import { useContexts } from "@/context";
+import { useParamContext } from "@/context";
 const DropDown = ({ menu, title }) => {
   const [toggle, setToggle] = useState(false);
   const [mess, setMess] = useState(title);
-  const { country, setCountry } = useContexts();
+  const { country, setCountry } = useParamContext();
 
   const dropDown = () => {
     setToggle((toggle) => !toggle);

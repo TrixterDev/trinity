@@ -1,3 +1,4 @@
+import BreadCrumps from "../BreadCrumps";
 import styles from "./style.module.scss";
 
 export const ButtonPrimary = ({ children, cs }) => {
