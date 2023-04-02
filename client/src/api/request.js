@@ -7,3 +7,7 @@ const requestApi = ky.create({
 export const fetchCarList = () => {
   return requestApi("car-lists?populate=*").json();
 };
+
+export const fetchCarById = (id) => {
+  return requestApi(`car-lists/${id}?populate=*`).json();
+};
