@@ -15,7 +15,7 @@ const MoreInfo = () => {
   // setTimeout(isReady && console.log("Dasha chtoto tam"), 3000);
 
   useEffect(() => {
-    fetchCarById(query.id).then((res) => setRes(res.data.attribhttps://vt.tiktok.com/ZS8p7GKQk/utes));
+    fetchCarById(query.id).then((res) => setRes(res.data.attributes));
     // Window.addEventListener("keydown", (e) => {
     //   console.log(`Key: ${e.key} with keycode ${e.keyCode} has been pressed`);
     // });

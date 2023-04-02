@@ -1,4 +1,4 @@
-import { fetchCarList } from "@/api/request";
+import { fetchCarList, fetchLimitCarList } from "@/api/request";
 import { useParamContext } from "@/context";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -13,14 +13,19 @@ const CarList = () => {
   const { country } = useParamContext();
 
   useEffect(() => {
-    fetchCarList().then((res) => setResponse(res.data));
+    if (asPath === "/") {
+      fetchLimitCarList().then((res) => setResponse(res.data));
+    } else {
+      fetchCarList().then((res) => setResponse(res.data));
+    }
   }, []);
 
   const router = useRouter();
+  const { asPath } = useRouter();
 
   return (
     <div>
-      <BreadCrumps />
+      {asPath === "/" ? null : <BreadCrumps />}
       <h1 className={styles.list__title}>Car list in {country}</h1>
       <div className={styles.list__cards}>
         {!response ? (

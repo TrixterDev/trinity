@@ -11,3 +11,9 @@ export const fetchCarList = () => {
 export const fetchCarById = (id) => {
   return requestApi(`car-lists/${id}?populate=*`).json();
 };
+
+export const fetchLimitCarList = () => {
+  return requestApi(
+    "car-lists?pagination[start]=0&pagination[limit]=4&populate=*"
+  ).json();
+};

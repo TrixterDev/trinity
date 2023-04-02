@@ -1,575 +1,604 @@
 .contanier {
-    text-align: center;
+  text-align: center;
 }
+
+.banner {
+  position: relative;
+  top: -220px;
+  z-index: -1;
+  left: 0;
+  > img {
+    width: 100%;
+    height: 100vh;
+  }
+  > h1 {
+    position: absolute;
+    top: 500px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  > p {
+    position: absolute;
+    top: 550px;
+    left: 0;
+    right: 0;
+  }
+}
+
 .paginate {
-    display: flex;
-    flex-direction: column;
-    left: 5px !important;
-    right: auto !important;
+  display: flex;
+  flex-direction: column;
+  left: 5px !important;
+  right: auto !important;
 }
 .bullet {
-    background: #ffffff70;
-    width: 10px;
-    height: 40px;
-    border-radius: 50%;
+  background: #ffffff70;
+  width: 10px;
+  height: 40px;
+  border-radius: 50%;
 }
 .bulletActive {
-    background: rgb(158, 27, 27);
-    border-radius: 50%;
+  background: rgb(158, 27, 27);
+  border-radius: 50%;
 }
 .mySwiper {
-    max-width: 700px;
+  max-width: 700px;
 
-    height: 500px;
+  height: 500px;
 }
 
 .SwiperSlide {
-    background: #131213;
+  background: #131213;
 }
 .slideH2 {
-    margin-top: 150px;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 90px;
-    color: #33b7bc;
+  margin-top: 150px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 90px;
+  color: #33b7bc;
 }
 .slideText {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 90px;
-    color: #33b7bc;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 90px;
+  color: #33b7bc;
 }
 //----------------------------------------
 .card {
-    display: flex;
-    padding-top: 100px;
-    gap: 80px;
+  display: flex;
+  padding-top: 100px;
+  gap: 80px;
 }
 
 .lambo {
-    background: url("/img_Ch/lambo.png") no-repeat;
-    background-position: center center;
-    position: relative;
-    width: 50%;
-    height: 860px;
-    margin-left: 5px;
-    border-radius: 20px;
+  background: url("/img_Ch/lambo.png") no-repeat;
+  background-position: center center;
+  position: relative;
+  width: 50%;
+  height: 860px;
+  margin-left: 5px;
+  border-radius: 20px;
 }
 .lambo2 {
-    text-align: center;
-    width: 50%;
+  text-align: center;
+  width: 50%;
 }
 .btn3 {
-    width: 215px;
-    height: 57px;
-    background: #33b7bc;
-    border-radius: 10px;
-    margin-top: 120px;
+  width: 215px;
+  height: 57px;
+  background: #33b7bc;
+  border-radius: 10px;
+  margin-top: 120px;
 }
 
 .text {
-    position: absolute;
-    bottom: 65px;
-    left: 60px;
+  position: absolute;
+  bottom: 65px;
+  left: 60px;
 }
 
 .text2 {
-    position: absolute;
-    bottom: 65px;
-    right: 60px;
+  position: absolute;
+  bottom: 65px;
+  right: 60px;
 
-    span {
-        font-size: 16px;
-    }
+  span {
+    font-size: 16px;
+  }
 }
 .h3 {
-    font-size: 46px;
-    line-height: 60px;
+  font-size: 46px;
+  line-height: 60px;
 }
 
 .GoSearch {
-    display: flex;
-    align-items: center;
-    max-width: 700px;
-    height: 90px;
-    background: linear-gradient(90.75deg, #6c5757 0.65%, rgba(90, 151, 117, 0.4) 107.06%);
-    border-radius: 10px;
-    justify-content: space-around;
-    margin-bottom: 30px;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  max-width: 700px;
+  height: 90px;
+  background: linear-gradient(
+    90.75deg,
+    #6c5757 0.65%,
+    rgba(90, 151, 117, 0.4) 107.06%
+  );
+  border-radius: 10px;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  margin: 0 auto;
 }
 .h2 {
-    text-align: center;
-    font-size: 50px;
-    margin-bottom: 20px;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 .input {
-    border: none;
-    background: none;
+  border: none;
+  background: none;
 }
 
 //вторая часть----------------
 
 .nav {
-    margin: 260px auto 50px;
-    justify-content: space-around;
-    display: flex;
-    max-width: 1180px;
-    height: 81px;
+  margin: 260px auto 50px;
+  justify-content: space-around;
+  display: flex;
+  max-width: 1180px;
+  height: 81px;
 
-    .list {
-        list-style: none;
-        font-size: 40px;
-    }
+  .list {
+    list-style: none;
+    font-size: 40px;
+  }
 }
 .grids {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
 }
 
 .grid {
-    position: relative;
-    height: 550px;
-    background: url("/img_Ch/auto1.png") no-repeat center center;
-    background-size: cover;
+  position: relative;
+  height: 550px;
+  background: url("/img_Ch/auto1.png") no-repeat center center;
+  background-size: cover;
 }
 .imgrid {
-    font-size: 40px;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
+  font-size: 40px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 .btn2 {
-    position: absolute;
-    width: 108px;
-    height: 54px;
-    border: 2px solid #33b7bc;
-    border-radius: 8px;
-    background: transparent;
-    color: rgb(255, 255, 255);
-    bottom: 20px;
-    right: 20px;
+  position: absolute;
+  width: 108px;
+  height: 54px;
+  border: 2px solid #33b7bc;
+  border-radius: 8px;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  bottom: 20px;
+  right: 20px;
 }
 .btn {
-    width: 350px;
-    height: 72px;
-    background: #33b7bc;
-    border-radius: 10px;
-    margin-top: 60px;
-    margin-bottom: 260px;
-    color: rgb(255, 255, 255);
+  width: 350px;
+  height: 72px;
+  background: #33b7bc;
+  border-radius: 10px;
+  margin-top: 60px;
+  margin-bottom: 260px;
+  color: rgb(255, 255, 255);
 }
 
 //33333333-------------------------
 .h1 {
-    font-weight: 700;
-    font-size: 160px;
-    line-height: 130px;
-    text-align: center;
-    margin-bottom: 146px;
+  font-weight: 700;
+  font-size: 160px;
+  line-height: 130px;
+  text-align: center;
+  margin-bottom: 146px;
 }
 
 .flexs {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .flex {
-    margin-bottom: 30px;
-    display: flex;
-    align-items: flex-end;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-end;
 }
 .fleximg {
-    font-weight: 500;
-    font-size: 24px;
+  font-weight: 500;
+  font-size: 24px;
 }
 .fleximg2 {
-    position: absolute;
-    right: -95px;
+  position: absolute;
+  right: -95px;
 }
 .text3 {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 35px;
-    margin-top: 30px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 35px;
+  margin-top: 30px;
 }
 
 .text4 {
-    font-weight: 800;
-    font-size: 54px;
-    line-height: 65px;
-    margin-top: 150px;
-    text-align: center;
-    color: #97b0dc;
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 65px;
+  margin-top: 150px;
+  text-align: center;
+  color: #97b0dc;
 }
 
 .mancars {
-    background: url("/img_Ch/mancars.png") no-repeat;
-    background-position: center center;
-    width: 100%;
-    height: 1083px;
-    margin-top: 100px;
+  background: url("/img_Ch/mancars.png") no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 1083px;
+  margin-top: 100px;
 }
 
 .h6 {
-    font-weight: 500;
-    font-size: 100px;
-    line-height: 130px;
-    margin-top: 260px;
-    margin-bottom: 120px;
+  font-weight: 500;
+  font-size: 100px;
+  line-height: 130px;
+  margin-top: 260px;
+  margin-bottom: 120px;
 }
 
 .flexContainer {
-    width: 100%;
-    display: flex;
-    padding: 0 20px;
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
 }
 
 .slide {
-    background: url("/img_Ch/auto1.png") no-repeat;
-    height: 60vh;
-    border-radius: 20px;
-    margin: 10px;
-    cursor: pointer;
-    flex: 1;
-    background-size: cover;
-    background-position: center;
+  background: url("/img_Ch/auto1.png") no-repeat;
+  height: 60vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
 }
 .slide.active {
-    flex: 10;
+  flex: 10;
 }
 
 .grigContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .gridItem {
-    position: relative;
-    background: url("/img_Ch/auto1.png") no-repeat;
-    height: 60vh;
-    border-radius: 20px;
-    margin: 10px;
-    cursor: pointer;
-    flex: 1;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
-    transition: 01s;
+  position: relative;
+  background: url("/img_Ch/auto1.png") no-repeat;
+  height: 60vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  transition: 01s;
 }
 .grigContainer :hover {
-    opacity: 10;
-    transition: 01s;
+  opacity: 10;
+  transition: 01s;
 }
 .text5 {
-    position: absolute;
-    bottom: 50px;
-    left: 59px;
-    font-size: 24px;
-    line-height: 40px;
+  position: absolute;
+  bottom: 50px;
+  left: 59px;
+  font-size: 24px;
+  line-height: 40px;
 }
 .gridImg {
-    max-width: 100%;
-    height: auto;
-    opacity: 8%;
+  max-width: 100%;
+  height: auto;
+  opacity: 8%;
 }
 
 @media screen and (max-width: 1650px) {
-    .card {
-        padding-top: 70px;
-        gap: 60px;
+  .card {
+    padding-top: 70px;
+    gap: 60px;
+  }
+  .lambo {
+    height: 700px;
+    .h3 {
+      font-size: 30px;
+      line-height: 50px;
     }
-    .lambo {
-        height: 700px;
-        .h3 {
-            font-size: 30px;
-            line-height: 50px;
-        }
-    }
-    .mySwiper {
-        height: 450px;
-    }
-    .btn3 {
-        margin-top: 20px;
-    }
+  }
+  .mySwiper {
+    height: 450px;
+  }
+  .btn3 {
+    margin-top: 20px;
+  }
 }
 @media screen and (max-width: 1300px) {
-    .card {
-        padding-top: 60px;
-        gap: 30px;
+  .card {
+    padding-top: 60px;
+    gap: 30px;
+  }
+  .lambo {
+    height: 550px;
+    .h3 {
+      font-size: 20px;
+      line-height: 40px;
     }
-    .lambo {
-        height: 550px;
-        .h3 {
-            font-size: 20px;
-            line-height: 40px;
-        }
-    }
-    .mySwiper {
-        height: 400px;
-    }
-    .btn3 {
-        margin-top: 10px;
-    }
-    .h2 {
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
-    .text2 {
-        position: absolute;
-        bottom: 25px;
-        right: 20px;
+  }
+  .mySwiper {
+    height: 400px;
+  }
+  .btn3 {
+    margin-top: 10px;
+  }
+  .h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .text2 {
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
 
-        span {
-            font-size: 16px;
-        }
+    span {
+      font-size: 16px;
     }
-    .text {
-        position: absolute;
-        bottom: 25px;
-        left: 20px;
-    }
-    .grids {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-    }
-    .btn {
-        margin-bottom: 170px;
-    }
-    .h1 {
-        font-size: 130px;
-        line-height: 100px;
-    }
-    .text4 {
-        font-size: 35px;
-        line-height: 45px;
-        margin-top: 100px;
-    }
-    .text3 {
-        font-size: 14px;
-        line-height: 30px;
-        margin-top: 25px;
-    }
-    .flexNumber1 {
-        width: 85px;
-        height: 85px;
-    }
-    .grigContainer {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  }
+  .text {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+  }
+  .grids {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .btn {
+    margin-bottom: 170px;
+  }
+  .h1 {
+    font-size: 130px;
+    line-height: 100px;
+  }
+  .text4 {
+    font-size: 35px;
+    line-height: 45px;
+    margin-top: 100px;
+  }
+  .text3 {
+    font-size: 14px;
+    line-height: 30px;
+    margin-top: 25px;
+  }
+  .flexNumber1 {
+    width: 85px;
+    height: 85px;
+  }
+  .grigContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 @media screen and (max-width: 1000px) {
-    .card {
-        padding-top: 60px;
-        flex-direction: column;
-        align-items: center;
+  .card {
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lambo {
+    height: 550px;
+    width: 100%;
+    .h3 {
+      font-size: 30px;
+      line-height: 40px;
     }
-    .lambo {
-        height: 550px;
-        width: 100%;
-        .h3 {
-            font-size: 30px;
-            line-height: 40px;
-        }
+  }
+  .mySwiper {
+    height: 500px;
+  }
+  .btn3 {
+    margin-top: 10px;
+    width: 315px;
+    height: 67px;
+  }
+  .h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+  .text2 {
+    bottom: 20px;
+    right: 20px;
+  }
+  .text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+  .lambo2 {
+    text-align: center;
+    width: 90%;
+    margin-top: 40px;
+  }
+  .nav {
+    .list {
+      font-size: 30px;
     }
-    .mySwiper {
-        height: 500px;
-    }
-    .btn3 {
-        margin-top: 10px;
-        width: 315px;
-        height: 67px;
-    }
-    .h2 {
-        font-size: 45px;
-        margin-bottom: 20px;
-    }
-    .text2 {
-        bottom: 20px;
-        right: 20px;
-    }
-    .text {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-    }
-    .lambo2 {
-        text-align: center;
-        width: 90%;
-        margin-top: 40px;
-    }
-    .nav {
-        .list {
-            font-size: 30px;
-        }
-    }
-    .h1 {
-        font-size: 110px;
-        line-height: 80px;
-    }
-    .text4 {
-        font-size: 25px;
-        line-height: 35px;
-    }
-    .text3 {
-        font-size: 11px;
-        line-height: 30px;
-        margin-top: 20px;
-    }
-    .mancars {
-        height: 800px;
-        background-position: top;
-    }
-    .gridItem {
-        height: 700px;
-    }
-    .text5 {
-        position: absolute;
-        bottom: 35px;
-        left: 50px;
-        font-size: 20px;
-        line-height: 30px;
-    }
+  }
+  .h1 {
+    font-size: 110px;
+    line-height: 80px;
+  }
+  .text4 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .text3 {
+    font-size: 11px;
+    line-height: 30px;
+    margin-top: 20px;
+  }
+  .mancars {
+    height: 800px;
+    background-position: top;
+  }
+  .gridItem {
+    height: 700px;
+  }
+  .text5 {
+    position: absolute;
+    bottom: 35px;
+    left: 50px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 @media screen and (max-width: 750px) {
-    .lambo {
-        .h3 {
-            font-size: 20px;
-            line-height: 30px;
-        }
-    }
-    .h2 {
-        font-size: 40px;
-        margin-bottom: 20px;
-    }
+  .lambo {
     .h3 {
-        font-size: 250px;
-        line-height: 30px;
+      font-size: 20px;
+      line-height: 30px;
     }
-    .text2 {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
+  }
+  .h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .h3 {
+    font-size: 250px;
+    line-height: 30px;
+  }
+  .text2 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 
-        span {
-            font-size: 10px;
-        }
+    span {
+      font-size: 10px;
     }
-    .lambo2 {
-        width: 100%;
-    }
-    .btn3 {
-        margin-top: 10px;
-        width: 90%;
+  }
+  .lambo2 {
+    width: 100%;
+  }
+  .btn3 {
+    margin-top: 10px;
+    width: 90%;
 
-        height: 67px;
-    }
-    .lambo {
-        display: none;
-    }
+    height: 67px;
+  }
+  .lambo {
+    display: none;
+  }
 
-    .btn {
-        margin-bottom: 100px;
-    }
-    .flexs {
-        flex-direction: column;
-        gap: 20px;
-    }
-    .h1 {
-        font-size: 90px;
-        line-height: 80px;
-        margin-bottom: 100px;
-    }
+  .btn {
+    margin-bottom: 100px;
+  }
+  .flexs {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .h1 {
+    font-size: 90px;
+    line-height: 80px;
+    margin-bottom: 100px;
+  }
 
-    .text4 {
-        font-size: 35px;
-        line-height: 45px;
-        margin-top: 100px;
-    }
-    .text3 {
-        font-size: 14px;
-        line-height: 30px;
-        margin-top: 25px;
-    }
-    .flexNumber1 {
-        width: 120px;
-        height: 120px;
-    }
-    .mancars {
-        height: 600px;
-        background-position: top;
-    }
+  .text4 {
+    font-size: 35px;
+    line-height: 45px;
+    margin-top: 100px;
+  }
+  .text3 {
+    font-size: 14px;
+    line-height: 30px;
+    margin-top: 25px;
+  }
+  .flexNumber1 {
+    width: 120px;
+    height: 120px;
+  }
+  .mancars {
+    height: 600px;
+    background-position: top;
+  }
 }
 @media screen and (max-width: 700px) {
-    .nav {
-        .list {
-            font-size: 20px;
-        }
+  .nav {
+    .list {
+      font-size: 20px;
     }
-    .imgrid {
-        font-size: 30px;
-    }
-    .h6 {
-        font-weight: 500;
-        font-size: 50px;
-        line-height: 100px;
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-    .slide {
-        height: 650px;
-    }
-    .gridItem {
-        height: 500px;
-    }
-    .text5 {
-        left: 25px;
-    }
+  }
+  .imgrid {
+    font-size: 30px;
+  }
+  .h6 {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .slide {
+    height: 650px;
+  }
+  .gridItem {
+    height: 500px;
+  }
+  .text5 {
+    left: 25px;
+  }
 }
 @media screen and (max-width: 500px) {
-    .grid {
-        height: 300px;
+  .grid {
+    height: 300px;
+  }
+  .imgrid {
+    font-size: 16px;
+  }
+  .btn2 {
+    position: absolute;
+    width: 78px;
+    height: 30px;
+  }
+  .btn {
+    width: 100%;
+  }
+  .nav {
+    .list {
+      font-size: 15px;
     }
-    .imgrid {
-        font-size: 16px;
-    }
-    .btn2 {
-        position: absolute;
-        width: 78px;
-        height: 30px;
-    }
-    .btn {
-        width: 100%;
-    }
-    .nav {
-        .list {
-            font-size: 15px;
-        }
-    }
-    .h1 {
-        font-size: 80px;
-        line-height: 60px;
-        margin-bottom: 90px;
-    }
+  }
+  .h1 {
+    font-size: 80px;
+    line-height: 60px;
+    margin-bottom: 90px;
+  }
 
-    .text4 {
-        font-size: 25px;
-        line-height: 45px;
-    }
-    .mancars {
-        height: 400px;
-        background-position: right;
-    }
-    .slide {
-        height: 500px;
-    }
-    .gridItem {
-        height: 350px;
-    }
-    .text5 {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        font-size: 18px;
-    }
+  .text4 {
+    font-size: 25px;
+    line-height: 45px;
+  }
+  .mancars {
+    height: 400px;
+    background-position: right;
+  }
+  .slide {
+    height: 500px;
+  }
+  .gridItem {
+    height: 350px;
+  }
+  .text5 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 18px;
+  }
 }
