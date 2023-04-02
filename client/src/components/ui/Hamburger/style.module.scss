@@ -1,0 +1,54 @@
+.hamburgerWrap {
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4375rem;
+  transition: 0.4s all;
+  width: 3.75rem;
+  height: 3.75rem;
+  cursor: pointer;
+  > span {
+    width: 3.8125rem;
+    height: 0.125rem;
+    background: #fff;
+    transition: 0.4s all;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      transition: 0.4s all;
+      left: 0;
+      right: 0;
+      border-top: 3px solid #fff;
+      border-right: 5px solid #000;
+    }
+    &:last-child {
+      left: -0.625rem;
+    }
+  }
+  &:hover {
+    > span {
+      background: #33b7bc;
+    }
+    &::after {
+      background: #33b7bc;
+    }
+  }
+}
+.isActive {
+  gap: 0;
+  span {
+    border-radius: 12px;
+    &:first-child {
+      transform: translate(0, 2px) rotate(45deg);
+    }
+    &:last-child {
+      transform: translate(10px, 0px) rotate(-45deg);
+    }
+    &::after {
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "car_lists",
+  "info": {
+    "singularName": "car-list",
+    "pluralName": "car-lists",
+    "displayName": "carList",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "engineCapacity": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "drive": {
+      "type": "string"
+    },
+    "qos": {
+      "type": "integer"
+    },
+    "horsePower": {
+      "type": "integer"
+    },
+    "price_1_7_day": {
+      "type": "string"
+    },
+    "price_7_14_day": {
+      "type": "string"
+    },
+    "price_14_30_day": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "acceleration": {
+      "type": "decimal"
+    }
+  }
+}

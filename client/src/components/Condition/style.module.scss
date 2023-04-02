@@ -1,0 +1,65 @@
+.wrapper {
+  margin-top: 7.5rem;
+}
+
+.contentBlock {
+  text-align: center;
+  .title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.375rem;
+    line-height: 5.625rem;
+    margin-top: 2.5rem;
+  }
+
+  .desc {
+    margin-top: 4.375rem;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 90px;
+  }
+}
+
+.yearBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+  gap: 50px;
+  .line {
+    height: 55px;
+    width: 1px;
+    background: #2c2f3d;
+  }
+  &__number {
+    display: flex;
+    align-items: flex-end;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 78px;
+    span {
+      font-size: 2.5rem;
+      transform: translateY(-8px);
+    }
+  }
+}
+
+.accordionBlock {
+  position: relative;
+  z-index: inherit;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 60px;
+    width: 716px;
+    height: 401px;
+    background: url("./img/effect-bg.png") no-repeat;
+    z-index: -1;
+  }
+}
+
+.accordionBlock {
+  margin-top: 4.375rem;
+}

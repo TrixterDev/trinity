@@ -1,0 +1,19 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 5.625rem;
+  color: #717171;
+  justify-content: center;
+  .activeLink {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 5.625rem;
+    text-decoration-line: underline;
+    color: #22ecf3;
+  }
+}
