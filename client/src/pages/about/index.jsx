@@ -52,7 +52,6 @@ function index() {
         width={1000}
         height={1000}
       />
-
       <div className={style.presentBlockContent}>
         <h2>Glad to present you Dubai Get Car</h2>
         <div className={style.presentBlockContent__row}>
