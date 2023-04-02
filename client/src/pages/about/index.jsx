@@ -6,7 +6,6 @@ function index() {
   return (
     <div className={style.wrapper}>
       <BreadCrumps />
-      └─> yarn dev yarn run v1.22.19
       <h1 className={style.title}>About Us</h1>
       <div className={style.yearsBlock}>
         <div className={style.yearsBlock__card}>
