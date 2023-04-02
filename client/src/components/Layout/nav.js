@@ -7,12 +7,12 @@ export const nav = [
 export const Customers = [
   {
     title: "About Us",
-    href: "#",
+    href: "/about",
     id: Math.floor(Math.random() * 1000),
   },
   {
     title: "Condition",
-    href: "#",
+    href: "/Condition",
     id: Math.floor(Math.random() * 1000),
   },
   {

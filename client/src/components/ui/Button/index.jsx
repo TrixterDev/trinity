@@ -8,9 +8,12 @@ export const ButtonPrimary = ({ children, cs }) => {
   );
 };
 
-export const ButtonSecondary = ({ children, cs }) => {
+export const ButtonSecondary = ({ children, cs, click }) => {
   return (
-    <button className={`${styles.btn__secondary} ${styles.btn} ${cs}`}>
+    <button
+      className={`${styles.btn__secondary} ${styles.btn} ${cs}`}
+      onClick={click}
+    >
       {children}
     </button>
   );

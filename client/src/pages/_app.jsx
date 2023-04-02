@@ -1,7 +1,7 @@
 import { Providers } from "@/context";
 import localFont from "next/font/local";
 import "../styles/globals.sass";
-import Layout from "./components/Layout";
+import Layout from "../components/Layout";
 
 const fontsss = localFont({
   src: [

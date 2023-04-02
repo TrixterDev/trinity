@@ -4,7 +4,7 @@ const Context = createContext({});
 
 export const Providers = ({ children }) => {
   const [hamburger, setHamburger] = useState(false);
-  const [country, setCountry] = useState();
+  const [country, setCountry] = useState("Dubai");
   const [ask, setAsk] = useState({
     name: "",
     email: "",
@@ -25,4 +25,4 @@ export const Providers = ({ children }) => {
   );
 };
 
-export const useContexts = () => useContext(Context);
+export const useParamContext = () => useContext(Context);

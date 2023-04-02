@@ -3,10 +3,10 @@ import { nav } from "./nav";
 import styles from "./style.module.scss";
 import CustomLink from "../CustomLink";
 import { Icons } from "../Icons";
-import { useContexts } from "@/context";
+import { useParamContext } from "@/context";
 
 const HamburgerMenu = () => {
-  const { hamburgerTogggle } = useContexts();
+  const { hamburgerTogggle } = useParamContext();
 
   return (
     <div className={styles.wrap}>

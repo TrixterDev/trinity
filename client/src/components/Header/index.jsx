@@ -7,14 +7,14 @@ import DropDown from "../ui/DropDown";
 import { country, lang } from "../ui/DropDown/menu";
 import CustomLink from "../ui/CustomLink";
 import { useState } from "react";
-import { useContexts } from "@/context";
+import { useParamContext } from "@/context";
 import { nav } from "../Layout/nav";
 import HamburgerMenu from "../ui/HamburgerMenu";
 
 const Header = () => {
   const [text, setText] = useState([]);
 
-  const { hamburger, hamburgerTogggle } = useContexts();
+  const { hamburger, hamburgerTogggle } = useParamContext();
 
   let img = "/img/logo.svg";
   return (
@@ -40,8 +40,8 @@ const Header = () => {
         <Link href="tel:+971 58 590 7875">+971 58 590 7875</Link>
 
         <div className={styles.dropDown}>
-          <DropDown text={text} title="Country" menu={country} />
-          <DropDown title="Lang" menu={lang} />
+          <DropDown text={text} title="Dubai" menu={country} />
+          <DropDown title="Eng" menu={lang} />
         </div>
       </nav>
     </header>

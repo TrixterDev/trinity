@@ -1,7 +1,7 @@
 import Accordion from "./components/Accordion";
 import style from "./style.module.scss";
-import EndSiteBlocks from "../components/EndSiteBlocks";
-import BreadCrumps from "../components/ui/BreadCrumps";
+import EndSiteBlocks from "../../components/EndSiteBlocks";
+import BreadCrumps from "../../components/ui/BreadCrumps";
 function Condition() {
   const accordionData = [
     {
@@ -64,8 +64,6 @@ function Condition() {
             <Accordion title={title} content={content} />
           ))}
         </div>
-
-        <EndSiteBlocks />
       </div>
     </div>
   );

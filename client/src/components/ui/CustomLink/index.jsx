@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "./style.module.scss";
 import cn from "clsx";
-import { useContexts } from "@/context";
 
 const CustomLink = ({ click, children, href, activeClass, dubleClass }) => {
   const { asPath } = useRouter();
