@@ -4,7 +4,8 @@
   "info": {
     "singularName": "img",
     "pluralName": "imgs",
-    "displayName": "img"
+    "displayName": "adventage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,14 +13,18 @@
   "pluginOptions": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "text": {
+      "type": "text"
     }
   }
 }

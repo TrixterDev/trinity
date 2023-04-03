@@ -32,7 +32,6 @@ const CarList = () => {
           <Loading />
         ) : (
           response.map((xz) => {
-            console.log(xz);
             return (
               <div key={xz.id} className={styles.list__card}>
                 <img src={xz.attributes.img.data.attributes.url} />

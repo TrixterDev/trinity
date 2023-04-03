@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -12,93 +12,59 @@ import { GoSearch } from "react-icons/go";
 import Link from "next/link";
 import { useParamContext } from "@/context";
 import CarList from "../CarList";
+import About from "../About";
+import { ButtonPrimary } from "../ui/Button";
+import { useRouter } from "next/router";
+import { fetchReviews } from "@/api/request";
+import Video from "../Video";
 
 const Main = () => {
+  const [res, setRes] = useState();
   const { country } = useParamContext();
+  const router = useRouter();
+  const [btn, setBtn] = useState(false);
+  const [src, setSrc] = useState();
+
+  const toggle = (src) => {
+    setSrc(src);
+    setBtn((btn) => !btn);
+  };
+
+  useEffect(() => {
+    fetchReviews().then((res) => setRes(res.data));
+  }, []);
+
   return (
     <div className={styles.contanier}>
       <div className={styles.banner}>
         <Image src="/img/home/banner.png" width={1920} height={1080} />
-        <h1>{country}</h1>
+        <h1 className={styles.title}>{country}</h1>
         <p>Luxury car rental</p>
       </div>
       <CarList />
-      <button className={styles.btn}>View all</button>
-      {/* <h1 className={styles.h1}>About Us</h1> */}
-      {/* <div className={styles.flexs}>
-        <div className={styles.wfl}>
-          <div className={styles.flex}>
-            <span className={styles.flexNumber}>
-              <Image
-                className={styles.flexNumber1}
-                src="/public/img_Ch/mumber1.png"
-                alt=""
-                width={100}
-                height={120}
-              />
-            </span>
-            <p className={styles.fleximg}>year</p>
-          </div>
-          <p className={styles.text3}>
-            We ve come a long way from a 2-people <br />
-            company to winning at Webby s.{" "}
-          </p>
-        </div>
+      <ButtonPrimary click={() => router.push("/carList")} cs={styles.btn}>
+        View all
+      </ButtonPrimary>
+      <About />
 
-        <div className={styles.wfl}>
-          <div className={styles.flex}>
-            <span className={styles.flexNumber}>
-              <Image
-                className={styles.flexNumber1}
-                src="/public/img_Ch/mumber1.png"
-                alt=""
-                width={100}
-                height={120}
-              />
-            </span>
-            <p className={styles.fleximg}>cars</p>
-          </div>
-          <p className={styles.text3}>
-            We ve come a long way from a 2-people <br />
-            company to winning at Webby s.{" "}
-          </p>
-        </div>
-
-        <div className={styles.wfl}>
-          <div className={styles.flex}>
-            <span className={styles.flexNumber}>
-              <Image
-                className={styles.flexNumber1}
-                src="/public/img_Ch/mumber1.png"
-                alt=""
-                width={120}
-                height={120}
-              />
-            </span>
-            <p className={styles.fleximg}>people</p>
-          </div>
-          <p className={styles.text3}>
-            We ve come a long way from a 2-people <br />
-            company to winning at Webby s.{" "}
-          </p>
-        </div>
-      </div>
-      <h4 className={styles.text4}>
-        I’m with cars for over 18 years. My auto passion <br /> and attention to
-        details will make your <br /> experience with us second to none.
-        Guaranteed.
-      </h4>
-      <div className={styles.mancars}></div> */}
       <h2 className={styles.h6}>Reviews</h2>
-      <div className={styles.flexContainer}>
-        <div className={styles.slide + " " + styles.slide1}></div>
-        <div className={styles.slide}></div>
-        <div className={styles.slide + " " + styles.active}></div>
-        <div className={styles.slide}></div>
-        <div className={styles.slide}></div>
-        <div className={styles.slide}></div>
-        <div className={styles.slide}></div>
-      </div>
+      {res &&
+         res.map((res, i) => {
+          console.log(src && src);
+          return (
+            <div>
+              <img
+                width={476}
+                height={740}
+                onClick={() =>
+                  toggle(res.attributes.video.data[0].attributes.url)
+                }
+                src={res.attributes.prew.data[0].attributes.formats.small.url}
+              />
+            </div>
+          );
+        })}
+      {btn && <Video src={src && src} />}
       <h2 className={styles.h6}>Advantages</h2>
       <div className={styles.grigContainer}>
         <div className={styles.gridItem}>

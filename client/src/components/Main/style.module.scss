@@ -13,14 +13,17 @@
   }
   > h1 {
     position: absolute;
-    top: 500px;
+    top: 50%;
     left: 0;
+    font-size: 90px;
     right: 0;
     bottom: 0;
   }
   > p {
     position: absolute;
-    top: 550px;
+    top: 65%;
+    font-size: 32px;
+    text-transform: uppercase;
     left: 0;
     right: 0;
   }

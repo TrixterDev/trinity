@@ -1,8 +1,11 @@
 import styles from "./style.module.scss";
 
-export const ButtonPrimary = ({ children, cs }) => {
+export const ButtonPrimary = ({ children, cs, click }) => {
   return (
-    <button className={`${styles.btn__primary} ${styles.btn} ${cs}`}>
+    <button
+      className={`${styles.btn__primary} ${styles.btn} ${cs}`}
+      onClick={click}
+    >
       {children}
     </button>
   );
